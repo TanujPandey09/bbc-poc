@@ -10,12 +10,11 @@ const Header = () => {
   const [activeLink, setActiveLink] = useState("Home");
   const [isClient, setIsClient] = useState(false);
 
-  // Ensure client-side rendering
   useEffect(() => {
     setIsClient(true);
   }, []);
 
-  // Update active link based on the current route
+
   useEffect(() => {
     if (isClient && router.pathname) {
       const currentPath = router.pathname.split("/")[1] || "home";
@@ -54,9 +53,9 @@ const Header = () => {
   return (
     isClient && (
       <header className="sticky top-0 z-50 bg-white shadow-md">
-        {/* Top Section */}
+       
         <div className="flex justify-between items-center px-4 py-2 border-b border-gray-200">
-          {/* Left: Hamburger Menu and Search */}
+
           <div className="flex items-center space-x-4">
             <button aria-label="Menu" className="text-black">
               <Menu size={28} />
@@ -66,12 +65,11 @@ const Header = () => {
             </button>
           </div>
 
-          {/* Center: Logo */}
+     
           <Link href="/" className="text-3xl font-bold tracking-widest">
             BBC
           </Link>
 
-          {/* Right: Register and Sign In */}
           <div className="flex items-center space-x-6">
             <button className="bg-black text-white px-4 py-2 font-bold rounded">
               Register
@@ -82,7 +80,7 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Bottom Navigation */}
+  
         <nav className="flex justify-center space-x-6 py-2">
           {links.map((link) => (
             <NavLink
@@ -95,7 +93,6 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Conditional News Sub-Navigation */}
         {router.pathname && router.pathname.startsWith("/news") && (
           <nav className="bg-gray-100 border-t border-gray-300 py-2">
             <div className="flex justify-center space-x-4">
@@ -122,7 +119,7 @@ const NavLink = ({ label, href, isActive, onClick }) => {
       <button
         onClick={onClick}
         aria-label={label}
-        className={`relative text-lg py-1 font-bold ${
+        className={`relative text-sm py-1 font-bold ${
           isActive
             ? "text-black"
             : "text-gray-600 hover:text-gray-800"
@@ -130,7 +127,7 @@ const NavLink = ({ label, href, isActive, onClick }) => {
       >
         {label}
         {isActive && (
-          <span className="absolute bottom-0 left-0 w-full h-[2px] bg-black" />
+          <span className="absolute bottom-0 left-0 w-full h-[3px] bg-black" />
         )}
       </button>
     </Link>

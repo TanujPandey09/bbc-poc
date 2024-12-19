@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const BBCExclusive = () => {
+const TwoColumnSection = () => {
   return (
     <div className="container mx-auto p-6 border-t-2 border-black">
       <h2 className="text-2xl font-bold mb-6">Only from the BBC</h2>
@@ -47,4 +47,4 @@ const BBCExclusive = () => {
   );
 };
 
-export default BBCExclusive;
+export default TwoColumnSection;

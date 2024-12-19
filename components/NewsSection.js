@@ -5,9 +5,8 @@ import { FaPlay } from "react-icons/fa";
 const NewsSection = ({ heading, items, type, variant }) => {
   return (
     <div
-      className={`mb-8 pt-6 ${
-        variant === "homepage" ? "border-t-2 border-black" : "border-y-2 border-black"
-      } container`}
+      className={`mb-8 pt-6 ${variant === "homepage" ? "border-t-2 border-black" : "border-y-2 border-black"
+        } container`}
     >
       <div className="flex items-center gap-2 mb-5">
         <h2
@@ -15,21 +14,21 @@ const NewsSection = ({ heading, items, type, variant }) => {
         >
           {heading}
         </h2>
-        {/* ChevronRight Icon - Only for Homepage */}
+
         {variant === "homepage" && (
           <ChevronRight className="text-black hover:text-black cursor-pointer w-6 h-6 flex-shrink-0" />
         )}
       </div>
 
-      {/* Content Layout for Most Watched */}
+
       {type === "mostWatched" && (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 px-4 py-2 mb-4">
           {items.map((item, index) => (
             <div key={index} className="flex gap-4 pt-4">
-              {/* Left: Number */}
+
               <span className="text-4xl font-bold text-gray-400">{item.no}</span>
 
-              {/* Right: Title and Button */}
+
               <div className="flex flex-col gap-1">
                 <div className="flex gap-2">
                   <FaPlay className="text-lg flex-shrink-0" />
@@ -43,15 +42,14 @@ const NewsSection = ({ heading, items, type, variant }) => {
         </div>
       )}
 
-      {/* Content Layout for Most Read */}
+
       {type === "mostRead" && (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 px-4 py-2 mb-4">
           {items.map((item, index) => (
             <div key={index} className="flex gap-4">
-              {/* Left: Number */}
               <span className="text-4xl font-bold text-gray-400">{item.no}</span>
 
-              {/* Right: Title */}
+
               <h3 className="font-semibold text-lg hover:underline cursor-pointer">
                 {item.title}
               </h3>

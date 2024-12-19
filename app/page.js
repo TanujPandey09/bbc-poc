@@ -26,32 +26,32 @@ export default function Home() {
       description: "The US wants the app to be sold or banned because of what it says are links to the Chinese state.",
       time: "3 hrs ago",
       category: "Technology",
-      link:"https://www.bbc.com/news/articles/cn4xw9lx02xo",
-      
+      link: "https://www.bbc.com/news/articles/cn4xw9lx02xo",
+      image: "https://tpc.googlesyndication.com/simgad/1456556633812311848?",
     },
     {
       title: "House Ethics Committee votes to release Matt Gaetz report",
       description: "The report follows a years-long investigation into allegations of sexual misconduct and illicit drug use, which Gaetz denies.",
       time: "20 mins ago",
       category: "US | Canda",
-    
-      link:"https://www.bbc.com/news/articles/cj30l3kxmrno"
+      image: "https://ichef.bbci.co.uk/images/ic/raw/p0k21mvc.jpg.webp",
+      link: "https://www.bbc.com/news/articles/cj30l3kxmrno"
     },
     {
       title: "Four paths Trudeau can take as political crisis deepens",
       description: "A shock high-profile resignation has forced Canada's prime minister to contend with his plummeting popularity.",
       time: "30 mins ago",
       category: "US & Canada",
-     
-       link:"https://www.bbc.com/news/articles/cj30l3kxmrno"
+
+      link: "https://www.bbc.com/news/articles/cj30l3kxmrno"
     },
     {
       title: "US makes third interest rate cut despite inflation risk",
       description: "The Federal Reserve has been cutting rates since September, even as inflation progress stalls.",
       time: "30 mins ago",
       category: "Business",
- 
-       link:"https://www.bbc.com/news/articles/clyj3ym3e55o"
+
+      link: "https://www.bbc.com/news/articles/clyj3ym3e55o"
     },
   ];
 
@@ -67,8 +67,15 @@ export default function Home() {
     ],
   };
 
-  
 
+  const mainStory = {
+    title: "US Supreme Court to hear TikTok challenge to potential ban",
+    description: "The US wants the app to be sold or banned because of what it says are links to the Chinese state.",
+    time: "3 hrs ago",
+    category: "Technology",
+    image: "https://tpc.googlesyndication.com/simgad/1456556633812311848?",
+    isLive: true,
+  };
 
   const data = [
     {
@@ -140,8 +147,8 @@ export default function Home() {
   return (
     <div className="container mx-auto px-10">
 
-      <HeroSection variant="homepage"   data={homepageData}
- />
+      <HeroSection variant="homepage" data={homepageData} mainStory={mainStory}
+      />
       <BBCExclusive />
       <NewsSection heading={moreNewsData.heading} items={moreNewsData.items} variant="homepage" />
 
