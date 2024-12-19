@@ -27,14 +27,14 @@ export default function Home() {
       time: "3 hrs ago",
       category: "Technology",
       link: "https://www.bbc.com/news/articles/cn4xw9lx02xo",
-      image: "https://tpc.googlesyndication.com/simgad/1456556633812311848?",
+      // image: "https://tpc.googlesyndication.com/simgad/1456556633812311848?",
     },
     {
       title: "House Ethics Committee votes to release Matt Gaetz report",
       description: "The report follows a years-long investigation into allegations of sexual misconduct and illicit drug use, which Gaetz denies.",
       time: "20 mins ago",
       category: "US | Canda",
-      image: "https://ichef.bbci.co.uk/images/ic/raw/p0k21mvc.jpg.webp",
+     
       link: "https://www.bbc.com/news/articles/cj30l3kxmrno"
     },
     {
@@ -45,14 +45,7 @@ export default function Home() {
 
       link: "https://www.bbc.com/news/articles/cj30l3kxmrno"
     },
-    {
-      title: "US makes third interest rate cut despite inflation risk",
-      description: "The Federal Reserve has been cutting rates since September, even as inflation progress stalls.",
-      time: "30 mins ago",
-      category: "Business",
-
-      link: "https://www.bbc.com/news/articles/clyj3ym3e55o"
-    },
+   
   ];
 
 
