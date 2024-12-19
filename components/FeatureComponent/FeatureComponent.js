@@ -20,7 +20,7 @@ const FeatureComponent = ({
 
       <div className={`flex flex-col md:flex-row items-center gap-6 pb-8 ${isImageLeft ? "flex-row" : "flex-row-reverse"}`}>
         {/* Image Section */}
-        <div className="md:col-span-6 flex-shrink-0">
+        <div className="md:col-span-8 flex-shrink-0">
           <Image
             src={imageSrc}
             alt={title}
@@ -31,7 +31,7 @@ const FeatureComponent = ({
         </div>
 
         {/* Content Section */}
-        <div className="md:col-span-6 flex-shrink-0">
+        <div className="md:col-span-4">
           <div className="flex flex-col gap-4">
             <h3 className="text-2xl font-semibold text-gray-800 hover:underline cursor-pointer">
               {title}
