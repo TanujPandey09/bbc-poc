@@ -11,7 +11,7 @@ const FeatureLayout = ({ features }) => {
           description={feature.description}
           buttonText={feature.buttonText}
           imagePosition={feature.imagePosition}
-          fetaureHeading={feature.fetaureHeading}
+          featureHeading={feature.featureHeading} 
         />
       ))}
     </div>

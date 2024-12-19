@@ -1,21 +1,26 @@
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 
-const FeatureComponent = ({ imageSrc, title, description, buttonText, imagePosition, fetaureHeading }) => {
-  const imageOrder = imagePosition === "left" ? "order-1 md:col-span-8" : "order-2 md:col-span-8";
-  const contentOrder = imagePosition === "left" ? "order-2 md:col-span-4" : "order-1 md:col-span-4";
+const FeatureComponent = ({
+  imageSrc,
+  title,
+  description,
+  buttonText,
+  imagePosition,
+  featureHeading,
+}) => {
+  const isImageLeft = imagePosition === "left";
 
   return (
     <div className="mb-10 border-t-2 border-black">
-  
       <div className="flex items-center mb-6 pt-6">
-        <h2 className="text-xl font-bold text-gray-800">{fetaureHeading}</h2>
+        <h2 className="text-2xl font-bold text-gray-800">{featureHeading}</h2> 
         <ChevronRight className="w-6 h-6 text-gray-600 ml-2" />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-12 items-center gap-6 pb-8">
-        
-        <div className={`col-span-12 md:${imageOrder}`}>
+      <div className={`flex flex-col md:flex-row items-center gap-6 pb-8 ${isImageLeft ? "flex-row" : "flex-row-reverse"}`}>
+        {/* Image Section */}
+        <div className="md:col-span-6 flex-shrink-0">
           <Image
             src={imageSrc}
             alt={title}
@@ -25,8 +30,8 @@ const FeatureComponent = ({ imageSrc, title, description, buttonText, imagePosit
           />
         </div>
 
-    
-        <div className={`col-span-12 md:${contentOrder}`}>
+        {/* Content Section */}
+        <div className="md:col-span-6 flex-shrink-0">
           <div className="flex flex-col gap-4">
             <h3 className="text-2xl font-semibold text-gray-800 hover:underline cursor-pointer">
               {title}

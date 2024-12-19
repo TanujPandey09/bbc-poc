@@ -1,5 +1,5 @@
 import HeroSection from "../components/HeroSection/HeroSection";
-import BBCExclusive from "@/components/TwoColumnSection/TwoColumnSection";
+import TwoColumnSection from "@/components/TwoColumnSection/TwoColumnSection";
 import HeroContent from "@/components/HeroContent/HeroContent";
 import FeatureLayout from "@/components/FeatureComponent";
 import NewSlider from "@/components/NewsCarousle/NewSlider";
@@ -113,28 +113,28 @@ export default function Home() {
 
   ];
 
-  const featureData = [
-    {
-      imageSrc: "https://ichef.bbci.co.uk/images/ic/1920x1080/p0kcf7vv.jpg.webp",
-      title: "How LGBTQ stories got real on-screen in 2024",
-      description:
-        "From Queer to Baby Reindeer and Will & Harper, LGBTQ representation took a step forward with varied and authentic characters.",
-      buttonText: "See more",
-      fetaureHeading: "Culture",
-      imagePosition: "left"
+    const featureData = [
+      {
+        imageSrc: "https://ichef.bbci.co.uk/images/ic/1920x1080/p0kcf7vv.jpg.webp",
+        title: "How LGBTQ stories got real on-screen in 2024",
+        description:
+          "From Queer to Baby Reindeer and Will & Harper, LGBTQ representation took a step forward with varied and authentic characters.",
+        buttonText: "See more",
+        featureHeading: "Culture",
+        imagePosition: "left"
 
-    },
-    {
-      imageSrc: "https://ichef.bbci.co.uk/images/ic/1376x774/p0kbxwl8.jpg.webp",
-      title: "Seven climate wins you may have missed in 2024",
-      description:
-        "Global temperatures rose and extreme weather ramped up, but significant breakthroughs for the climate took place this year.",
-      buttonText: "See more",
-      fetaureHeading: "Future Planet",
-      imagePosition: "right"
+      },
+      {
+        imageSrc: "https://ichef.bbci.co.uk/images/ic/1376x774/p0kbxwl8.jpg.webp",
+        title: "Seven climate wins you may have missed in 2024",
+        description:
+          "Global temperatures rose and extreme weather ramped up, but significant breakthroughs for the climate took place this year.",
+        buttonText: "See more",
+        featureHeading: "Future Planet",
+        imagePosition: "right"
 
-    },
-  ];
+      },
+    ];
 
 
   return (
@@ -142,7 +142,7 @@ export default function Home() {
 
       <HeroSection variant="homepage" data={homepageData} mainStory={mainStory}
       />
-      <BBCExclusive />
+      <TwoColumnSection />
       <NewsSection heading={moreNewsData.heading} items={moreNewsData.items} variant="homepage" />
 
       {heroData.map((data, index) => (
